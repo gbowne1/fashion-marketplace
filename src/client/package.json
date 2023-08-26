@@ -1,64 +1,64 @@
 {
-  "name": "client",
-  "version": "1.0.0",
-  "main": "index.js",
-  "private": true,
-  "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.14.3",
-    "@mui/material": "^5.14.5",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.15.0",
-    "react-scripts": "^5.0.1",
-    "styled-components": "^6.0.7",
-    "web-vitals": "^3.4.0"
-  },
-  "devDependencies": {
-    "@babel/eslint-parser": "^7.15.0",
-    "@testing-library/jest-dom": "^6.1.2",
-    "@testing-library/react": "^14.0.0",
-    "eslint": "^8.0.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "^2.4.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "format": "prettier --write \"src/**/*.js\" \"src/**/*.jsx\" \"src/**/*.ts\" \"src/**/*.tsx\"",
-    "lint": "eslint \"src/**/*.js\" \"src/**/*.jsx\" \"src/**/*.ts\" \"src/**/*.tsx\""
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "plugin:prettier/recommended"
-    ],
-    "parser": "@babel/eslint-parser",
-    "parserOptions": {
-      "ecmaVersion": 2023,
-      "sourceType": "module"
-    }
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "client",
+	"version": "1.0.0",
+	"main": "index.js",
+	"private": true,
+	"dependencies": {
+		"@emotion/react": "^11.11.1",
+		"@emotion/styled": "^11.11.0",
+		"@mui/icons-material": "^5.14.3",
+		"@mui/material": "^5.14.5",
+		"prop-types": "^15.8.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.15.0",
+		"react-scripts": "^5.0.1",
+		"styled-components": "^6.0.7",
+		"web-vitals": "^3.4.0"
+	},
+	"devDependencies": {
+		"@babel/eslint-parser": "^7.15.0",
+		"@testing-library/jest-dom": "^6.1.2",
+		"@testing-library/react": "^14.0.0",
+		"eslint": "^8.0.1",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-prettier": "^5.0.0",
+		"eslint-plugin-react": "^7.28.0",
+		"eslint-plugin-react-hooks": "^4.3.0",
+		"prettier": "^3.0.2"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"format": "prettier --write .",
+		"lint": "eslint --fix ."
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"plugin:prettier/recommended"
+		],
+		"parser": "@babel/eslint-parser",
+		"parserOptions": {
+			"ecmaVersion": 2023,
+			"sourceType": "module"
+		}
+	},
+	"prettier": {
+		"singleQuote": true,
+		"trailingComma": "es5"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }

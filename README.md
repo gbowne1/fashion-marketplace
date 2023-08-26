@@ -7,6 +7,12 @@ E-commerce Project
 [![React](https://img.shields.io/badge/React-<version>-<color>)](https://reactjs.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-<version>-<color>)](https://nodejs.org/)
 
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.nodejs.com)
+[![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)](https://expressjs.com)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://www.nodejs.com)
+[![MaterialUI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)](https://www.mui.com)
+
 ## Introduction
 
 This is an e-commerce project built using MongoDB, Express, React, Node.js, and Material UI/MUI. It allows users to browse and purchase products online.
