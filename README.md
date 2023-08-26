@@ -23,9 +23,18 @@ This is an e-commerce project built using MongoDB, Express, React, Node.js, and 
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/gbowne1/fashion-marketplace.git`
-2. Install dependencies: `npm install`
-3. Set up the database: [instructions here]
-4. Start the server: `npm start`
+2. cd to /src/client
+3. Install dependencies: `npm install`
+4. cd to /src/server
+5. Install dependencies: `npm install`
+
+## Starting the project
+
+1. Set up the database: [instructions here]
+2. cd to /src/client
+3. Start the react dev server: `npm start`
+4. cd to /src/server
+5. start the server: `node server.js`
 
 ## Usage
 
