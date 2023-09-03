@@ -1,0 +1,20 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "tests for fashion-marketplace",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "test",
+    "ecommerce",
+    "mern",
+    "react"
+  ],
+  "author": "Greg Bowne",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^29.6.4"
+  }
+}
