@@ -9,6 +9,7 @@ import {
 	TextField,
 	Badge,
 	Avatar,
+	Typography,
 } from '@mui/material';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -17,6 +18,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SearchIcon from '@mui/icons-material/Search';
 import Home from './pages/Home';
 import Product from './pages/Product';
+import ShoppingCart from './pages/ShoppingCart';
 
 function App() {
 	const [darkMode, setDarkMode] = useState(false);
@@ -49,7 +51,7 @@ function App() {
 	return (
 		<div>
 			<BrowserRouter>
-				<AppBar position="static">
+				<AppBar position="static" sx={{ bgcolor: '#ff69b4' }}>
 					<Toolbar>
 						<IconButton
 							edge="start"
@@ -58,11 +60,25 @@ function App() {
 						>
 							<MenuIcon />
 						</IconButton>
+						<Typography
+							variant="h6"
+							component="div"
+							sx={{ flexGrow: 1 }}
+						>
+							Product Name
+						</Typography>
 						<TextField label="Search" variant="outlined" />
 						<IconButton>
 							<SearchIcon />
 						</IconButton>
 						{/* Add other components to the toolbar */}
+						<Typography
+							variant="h6"
+							component="div"
+							sx={{ flexGrow: 1 }}
+						>
+							SilkyDreams Lingerle
+						</Typography>
 						<Switch
 							checked={darkMode}
 							onChange={handleDarkModeChange}
@@ -96,6 +112,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/products/:id" element={<Product />} />
+					<Route path="/cart" element={<ShoppingCart />} />
 				</Routes>
 			</BrowserRouter>
 		</div>

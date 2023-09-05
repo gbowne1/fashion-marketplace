@@ -15,6 +15,7 @@
   "author": "Greg Bowne",
   "license": "MIT",
   "dependencies": {
+    "cypress": "^13.1.0",
     "jest": "^29.6.4"
   }
 }
