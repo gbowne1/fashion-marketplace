@@ -10,17 +10,23 @@ import {
 	Badge,
 	Avatar,
 	Typography,
+	createTheme,
+	ThemeProvider,
 } from '@mui/material';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SearchIcon from '@mui/icons-material/Search';
 import Home from './pages/Home';
 import Product from './pages/Product';
 import ShoppingCart from './pages/ShoppingCart';
 
 function App() {
+	const theme = createTheme({
+		typography: {
+			fontFamily: 'Great Vibes, cursive',
+		},
+	});
 	const [darkMode, setDarkMode] = useState(false);
 
 	const handleDarkModeChange = () => {
@@ -63,7 +69,10 @@ function App() {
 						<Typography
 							variant="h6"
 							component="div"
-							sx={{ flexGrow: 1 }}
+							sx={{
+								flexGrow: 1,
+								fontFamily: 'Great Vibes, cursive',
+							}}
 						>
 							Product Name
 						</Typography>
@@ -75,7 +84,10 @@ function App() {
 						<Typography
 							variant="h6"
 							component="div"
-							sx={{ flexGrow: 1 }}
+							sx={{
+								flexGrow: 1,
+								fontFamily: 'Great Vibes, cursive',
+							}}
 						>
 							SilkyDreams Lingerle
 						</Typography>
@@ -87,26 +99,25 @@ function App() {
 							<Badge badgeContent={0} color="error">
 								<ShoppingCartIcon />
 							</Badge>
-							<IconButton onClick={handleMenuOpen}>
-								<Avatar />
-								<AccountCircleIcon />
-							</IconButton>
-							<Menu
-								anchorEl={anchorEl}
-								open={Boolean(anchorEl)}
-								onClose={handleMenuClose}
-							>
-								<MenuItem onClick={handleMenuClose}>
-									Profile
-								</MenuItem>
-								<MenuItem onClick={handleMenuClose}>
-									My account
-								</MenuItem>
-								<MenuItem onClick={handleMenuClose}>
-									Logout
-								</MenuItem>
-							</Menu>
 						</IconButton>
+						<IconButton onClick={handleMenuOpen}>
+							<Avatar />
+						</IconButton>
+						<Menu
+							anchorEl={anchorEl}
+							open={Boolean(anchorEl)}
+							onClose={handleMenuClose}
+						>
+							<MenuItem onClick={handleMenuClose}>
+								Profile
+							</MenuItem>
+							<MenuItem onClick={handleMenuClose}>
+								My account
+							</MenuItem>
+							<MenuItem onClick={handleMenuClose}>
+								Logout
+							</MenuItem>
+						</Menu>
 					</Toolbar>
 				</AppBar>
 				<Routes>
