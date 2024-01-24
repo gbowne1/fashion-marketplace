@@ -1,133 +1,70 @@
-import React, { useState } from 'react';
-import {
-	AppBar,
-	Toolbar,
-	IconButton,
-	Switch,
-	Menu,
-	MenuItem,
-	TextField,
-	Badge,
-	Avatar,
-	Typography,
-	createTheme,
-	ThemeProvider,
-} from '@mui/material';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import MenuIcon from '@mui/icons-material/Menu';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import SearchIcon from '@mui/icons-material/Search';
-import Home from './pages/Home';
-import Product from './pages/Product';
-import ShoppingCart from './pages/ShoppingCart';
+import React from 'react'
+import './App.css'
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import {AppBar, Toolbar, Typography, IconButton} from '@mui/material'
+import MenuIcon from '@mui/icons-material/Menu'
+import Home from './pages/Home'
+import Lingerie from './pages/Lingerie'
+import Bras from './pages/Bras'
+import Panties from './pages/Panties'
+import Hosiery from './pages/Hosiery'
+import Shoes from './pages/Shoes'
+import Best from './pages/Best'
+import Activewear from './pages/Activewear'
+import ShoppingCart from './pages/ShoppingCart'
+import Footer from './components/Footer'
 
 function App() {
-	const theme = createTheme({
-		typography: {
-			fontFamily: 'Great Vibes, cursive',
-		},
-	});
-	const [darkMode, setDarkMode] = useState(false);
+    return (
+        <Router>
+            <div className='App'>
+                <AppBar>
+                    <Toolbar>
+                        <IconButton size='medium' edge='start' color='inherit' aria-label='menu' sx={{mr: 2}}>
+                            <MenuIcon />
+                        </IconButton>
+                        <Typography align={'center'}>Silky Dreams Lingerie</Typography>
+                        <Link to='/bras' color='inherit'>
+                            Bras
+                        </Link>
+                        <Link to='/panties' color='inherit'>
+                            Panties
+                        </Link>
+                        <Link to='/lingerie' color='inherit'>
+                            Lingerie
+                        </Link>
+                        <Link to='/hosiery' color='inherit'>
+                            Hosiery
+                        </Link>
+                        <Link to='/shoes' color='inherit'>
+                            Shoes
+                        </Link>
+                        <Link to='/activewear' color='inherit'>
+                            Activewear
+                        </Link>
+                        <Link to='/best' color='inherit'>
+                            Best Sellers
+                        </Link>
+                    </Toolbar>
+                </AppBar>
 
-	const handleDarkModeChange = () => {
-		setDarkMode(!darkMode);
-	};
-
-	const [anchorEl, setAnchorEl] = useState(null);
-
-	const handleMenuOpen = (event) => {
-		setAnchorEl(event.currentTarget);
-	};
-
-	const handleMenuClose = () => {
-		setAnchorEl(null);
-	};
-
-	const handleCartOpen = (event) => {
-		setAnchorEl(event.currentTarget);
-	};
-
-	const handleCartClose = () => {
-		setAnchorEl(null);
-	};
-
-	const open = Boolean(anchorEl);
-	const id = open ? 'cart-popover' : undefined;
-
-	return (
-		<div>
-			<BrowserRouter>
-				<AppBar position="static" sx={{ bgcolor: '#ff69b4' }}>
-					<Toolbar>
-						<IconButton
-							edge="start"
-							color="inherit"
-							aria-label="menu"
-						>
-							<MenuIcon />
-						</IconButton>
-						<Typography
-							variant="h6"
-							component="div"
-							sx={{
-								flexGrow: 1,
-								fontFamily: 'Great Vibes, cursive',
-							}}
-						>
-							Product Name
-						</Typography>
-						<TextField label="Search" variant="outlined" />
-						<IconButton>
-							<SearchIcon />
-						</IconButton>
-						{/* Add other components to the toolbar */}
-						<Typography
-							variant="h6"
-							component="div"
-							sx={{
-								flexGrow: 1,
-								fontFamily: 'Great Vibes, cursive',
-							}}
-						>
-							SilkyDreams Lingerle
-						</Typography>
-						<Switch
-							checked={darkMode}
-							onChange={handleDarkModeChange}
-						/>
-						<IconButton onClick={handleCartOpen}>
-							<Badge badgeContent={0} color="error">
-								<ShoppingCartIcon />
-							</Badge>
-						</IconButton>
-						<IconButton onClick={handleMenuOpen}>
-							<Avatar />
-						</IconButton>
-						<Menu
-							anchorEl={anchorEl}
-							open={Boolean(anchorEl)}
-							onClose={handleMenuClose}
-						>
-							<MenuItem onClick={handleMenuClose}>
-								Profile
-							</MenuItem>
-							<MenuItem onClick={handleMenuClose}>
-								My account
-							</MenuItem>
-							<MenuItem onClick={handleMenuClose}>
-								Logout
-							</MenuItem>
-						</Menu>
-					</Toolbar>
-				</AppBar>
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/products/:id" element={<Product />} />
-					<Route path="/cart" element={<ShoppingCart />} />
-				</Routes>
-			</BrowserRouter>
-		</div>
-	);
+                <main className='App-main'>
+                    <Routes>
+                        <Route path='/' element={<Home />} />
+                        <Route path='/lingerie' element={<Lingerie />} />
+                        <Route path='/bras' element={<Bras />} />
+                        <Route path='/panties' element={<Panties />} />
+                        <Route path='/hosiery' element={<Hosiery />} />
+                        <Route path='/shoes' element={<Shoes />} />
+                        <Route path='/best' element={<Best />} />
+                        <Route path='/activewear' element={<Activewear />} />
+                        <Route path='/cart' element={<ShoppingCart />} />
+                    </Routes>
+                </main>
+                <Footer className='footer' />
+            </div>
+        </Router>
+    )
 }
 
-export default App;
+export default App
