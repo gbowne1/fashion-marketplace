@@ -1,5 +1,5 @@
 function Best() {
-    // Component code
+	// Component code
 }
 
-export default Best
+export default Best;

@@ -1,10 +1,23 @@
 {
-	"watch": ["src"],
-	"ext": "js",
-	"exec": "node server.js",
 	"ignore": ["src/client", "src/server/node_modules"],
 	"env": {
 		"NODE_ENV": "development",
 		"PORT": 5000
+	},
+	"watch": [
+		"src",
+		"src/client",
+		"src/server"
+	],
+	"ext": "js,json",
+	"exec": "node src/server/server.js",
+	"restartDelay": "",
+	"args": "",
+	"nodeArgs": "",
+	"verbose": true,
+	"watchOptions": "",
+	"delay": 1000,
+	"execMap": {
+		"js": "node --inspect"
 	}
 }

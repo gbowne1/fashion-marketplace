@@ -1,5 +1,5 @@
 function Activewear() {
-    // Component code
+	// Component code
 }
 
-export default Activewear
+export default Activewear;

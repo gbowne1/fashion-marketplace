@@ -1,3 +1,3 @@
 function Shoes() {}
 
-export default Shoes
+export default Shoes;

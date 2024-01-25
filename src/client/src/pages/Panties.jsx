@@ -1,5 +1,5 @@
 function Panties() {
-    // Component code
+	// Component code
 }
 
-export default Panties
+export default Panties;

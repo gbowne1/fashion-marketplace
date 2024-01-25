@@ -1,5 +1,5 @@
 function Hosiery() {
-    // Component code
+	// Component code
 }
 
-export default Hosiery
+export default Hosiery;

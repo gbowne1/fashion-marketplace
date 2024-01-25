@@ -1,5 +1,5 @@
 function Lingerie() {
-    // Component code
+	// Component code
 }
 
-export default Lingerie
+export default Lingerie;

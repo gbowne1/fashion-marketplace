@@ -1,5 +1,5 @@
 function Bras() {
-    // Component code
+	// Component code
 }
 
-export default Bras
+export default Bras;
