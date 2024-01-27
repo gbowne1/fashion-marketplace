@@ -18,7 +18,7 @@ function App() {
 	return (
 		<Router>
 			<div className="App">
-				<AppBar>
+				<AppBar style={{ background: '#ff00ff' }}>
 					<Toolbar>
 						<IconButton
 							size="medium"
