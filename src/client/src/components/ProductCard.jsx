@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
 	Card,
 	CardMedia,
@@ -46,5 +47,15 @@ function ProductCard(props) {
 		</Card>
 	);
 }
+
+ProductCard.propTypes = {
+	product: PropTypes.shape({
+		image: PropTypes.string.isRequired,
+		name: PropTypes.string.isRequired,
+		description: PropTypes.string.isRequired,
+		price: PropTypes.number.isRequired,
+		rating: PropTypes.number.isRequired,
+	}).isRequired,
+};
 
 export default ProductCard;
