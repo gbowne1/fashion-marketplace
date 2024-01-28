@@ -1,62 +1,119 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import '../styles/Footer.css';
+import React from 'react';
+import { Box, Container, Grid, Typography, Link } from '@mui/material';
+import { Facebook, Twitter, Instagram } from '@mui/icons-material';
 
 export default function Footer() {
 	return (
 		<Box
 			sx={{
+				mt: 5, // Increase this value to move the icons further down
+				display: 'flex',
+				justifyContent: 'center',
 				position: 'fixed',
 				bottom: 0,
 				width: '100%',
 				bgcolor: '#ff4f8f',
 				p: 6,
 			}}
-			component="footer"
 		>
-			<Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-				<Box>
-					<Typography variant="subtitle1" color="text.secondary">
-						Silky Dreams Lingerie
-					</Typography>
-					<Link href="#" color="inherit">
-						Terms of Service
-					</Link>
-					<Link href="#" color="inherit">
-						Privacy Policy
-					</Link>
-					<Link href="#" color="inherit">
-						About Us
-					</Link>
-				</Box>
-				<Box>
-					<Typography variant="subtitle1" color="text.secondary">
-						Follow us on
-					</Typography>
-					<Box
-						sx={{
-							mt: 1,
-							display: 'flex',
-							justifyContent: 'center',
-						}}
-					>
-						<Link href="#" color="inherit">
-							<FacebookIcon />
-						</Link>
-						<Link href="#" color="inherit">
-							<TwitterIcon />
-						</Link>
-						<Link href="#" color="inherit">
-							<InstagramIcon />
-						</Link>
-					</Box>
-				</Box>
-			</Box>
+			<Container>
+				<Grid container spacing={5}>
+					{/* Store Locations */}
+					<Grid item xs={12} sm={4}>
+						<Typography
+							variant="h6"
+							color="text.primary"
+							gutterBottom
+						>
+							Store Locations
+						</Typography>
+						{/* Add your store locations here */}
+					</Grid>
+
+					{/* Store Hours */}
+					<Grid item xs={12} sm={4}>
+						<Typography
+							variant="h6"
+							color="text.primary"
+							gutterBottom
+						>
+							Store Hours
+						</Typography>
+						{/* Add your store hours here */}
+					</Grid>
+
+					{/* Contact Information */}
+					<Grid item xs={12} sm={4}>
+						<Typography
+							variant="h6"
+							color="text.primary"
+							gutterBottom
+						>
+							Contact Us
+						</Typography>
+						{/* Add your contact information here */}
+					</Grid>
+
+					{/* Follow Us Section */}
+					<Grid item xs={12}>
+						<Typography
+							variant="h6"
+							color="text.primary"
+							gutterBottom
+						>
+							Follow us on
+						</Typography>
+						<Box
+							sx={{
+								mt: 1,
+								display: 'flex',
+								justifyContent: 'center',
+							}}
+						>
+							<Link href="https://facebook.com" color="inherit">
+								<Facebook />
+							</Link>
+							<Link href="https://twitter.com" color="inherit">
+								<Twitter />
+							</Link>
+							<Link href="https://instagram.com" color="inherit">
+								<Instagram />
+							</Link>
+						</Box>
+					</Grid>
+
+					{/* Google Map */}
+
+					{/* Newsletter Subscription Form */}
+					<Grid item xs={12}>
+						{/* Add your subscription form here */}
+					</Grid>
+
+					{/* Column of Links */}
+					<Grid item xs={12}>
+						{/* Add your links here */}
+					</Grid>
+
+					{/* Copyright Information */}
+					<Grid item xs={12}>
+						<Typography
+							variant="body2"
+							color="text.secondary"
+							align="center"
+						>
+							{'Copyright © '}
+							<Link
+								color="inherit"
+								href="https://your-website.com/"
+							>
+								Your Website
+							</Link>{' '}
+							{new Date().getFullYear()}
+							{'.'}
+						</Typography>
+					</Grid>
+				</Grid>
+			</Container>
 		</Box>
 	);
 }
