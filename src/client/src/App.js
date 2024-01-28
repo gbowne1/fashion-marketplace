@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { AppBar, Toolbar, Typography, IconButton } from '@mui/material';
+import { AppBar, Button, Toolbar, Typography, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Home from './pages/Home';
 import Lingerie from './pages/Lingerie';
@@ -32,27 +32,55 @@ function App() {
 						<Typography align={'center'}>
 							Silky Dreams Lingerie
 						</Typography>
-						<Link to="/bras" color="inherit">
+						<Button
+							component={Link}
+							to="/bras"
+							sx={{ color: 'inherit', margin: '0 10px' }}
+						>
 							Bras
-						</Link>
-						<Link to="/panties" color="inherit">
+						</Button>
+						<Button
+							component={Link}
+							to="/panties"
+							sx={{ color: 'inherit', margin: '0 10px' }}
+						>
 							Panties
-						</Link>
-						<Link to="/lingerie" color="inherit">
+						</Button>
+						<Button
+							component={Link}
+							to="/lingerie"
+							sx={{ color: 'inherit', margin: '0 10px' }}
+						>
 							Lingerie
-						</Link>
-						<Link to="/hosiery" color="inherit">
+						</Button>
+						<Button
+							component={Link}
+							to="/hosiery"
+							sx={{ color: 'inherit', margin: '0 10px' }}
+						>
 							Hosiery
-						</Link>
-						<Link to="/shoes" color="inherit">
+						</Button>
+						<Button
+							component={Link}
+							to="/shoes"
+							sx={{ color: 'inherit', margin: '0 10px' }}
+						>
 							Shoes
-						</Link>
-						<Link to="/activewear" color="inherit">
+						</Button>
+						<Button
+							component={Link}
+							to="/activewear"
+							sx={{ color: 'inherit', margin: '0 10px' }}
+						>
 							Activewear
-						</Link>
-						<Link to="/best" color="inherit">
+						</Button>
+						<Button
+							component={Link}
+							to="/best"
+							sx={{ color: 'inherit', margin: '0 10px' }}
+						>
 							Best Sellers
-						</Link>
+						</Button>
 					</Toolbar>
 				</AppBar>
 
