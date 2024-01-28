@@ -9,7 +9,16 @@ import '../styles/Footer.css';
 
 export default function Footer() {
 	return (
-		<Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
+		<Box
+			sx={{
+				position: 'fixed',
+				bottom: 0,
+				width: '100%',
+				bgcolor: '#ff4f8f',
+				p: 6,
+			}}
+			component="footer"
+		>
 			<Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
 				<Box>
 					<Typography variant="subtitle1" color="text.secondary">
@@ -29,7 +38,13 @@ export default function Footer() {
 					<Typography variant="subtitle1" color="text.secondary">
 						Follow us on
 					</Typography>
-					<Box sx={{ mt: 1 }}>
+					<Box
+						sx={{
+							mt: 1,
+							display: 'flex',
+							justifyContent: 'center',
+						}}
+					>
 						<Link href="#" color="inherit">
 							<FacebookIcon />
 						</Link>
