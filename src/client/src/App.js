@@ -13,6 +13,8 @@ import Best from './pages/Best';
 import Activewear from './pages/Activewear';
 import ShoppingCart from './pages/ShoppingCart';
 import Footer from './components/Footer';
+import TermsAndCondition from './pages/TermsAndCondition';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
 	return (
@@ -95,6 +97,11 @@ function App() {
 						<Route path="/best" element={<Best />} />
 						<Route path="/activewear" element={<Activewear />} />
 						<Route path="/cart" element={<ShoppingCart />} />
+						<Route path="/terms" element={<TermsAndCondition />} />
+						<Route
+							path="/privacypolicy"
+							element={<PrivacyPolicy />}
+						/>
 					</Routes>
 				</main>
 				<Footer className="footer" />

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Box, Container, Grid, Typography, Link } from '@mui/material';
 import { Facebook, Twitter, Instagram } from '@mui/icons-material';
+import { Link as RouterLink } from 'react-router-dom';
 
 export default function Footer() {
 	return (
 		<Box
 			sx={{
-				mt: 5, // Increase this value to move the icons further down
+				mt: 5,
 				display: 'flex',
 				justifyContent: 'center',
 				position: 'fixed',
@@ -92,6 +93,21 @@ export default function Footer() {
 					{/* Column of Links */}
 					<Grid item xs={12}>
 						{/* Add your links here */}
+						<Link
+							component={RouterLink}
+							to="/terms"
+							color="inherit"
+							style={{ marginRight: '20px' }}
+						>
+							Terms and Conditions
+						</Link>
+						<Link
+							component={RouterLink}
+							to="/privacypolicy"
+							color="inherit"
+						>
+							Privacy Policy
+						</Link>
 					</Grid>
 
 					{/* Copyright Information */}
