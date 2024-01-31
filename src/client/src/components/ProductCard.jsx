@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import {
 	Card,
@@ -9,9 +9,11 @@ import {
 	Button,
 } from '@mui/material';
 import { Rating } from '@mui/material';
+import { CartContext } from '../contexts/CartContext'; // Import the CartContext
 
 function ProductCard(props) {
 	const { product } = props;
+	const { addToCart } = useContext(CartContext); // Use the addToCart function from the CartContext
 
 	return (
 		<Card sx={{ maxWidth: 345 }}>
@@ -34,8 +36,13 @@ function ProductCard(props) {
 				<Rating name="product-rating" value={product.rating} readOnly />
 			</CardContent>
 			<CardActions>
-				<Button size="small" color="primary">
-					Add to cart
+				<Button
+					size="small"
+					color="primary"
+					onClick={() => addToCart(product)}
+				>
+					{' '}
+					// Pass the product to the addToCart function Add to cart
 				</Button>
 				<Button size="small" color="secondary">
 					Favorite
