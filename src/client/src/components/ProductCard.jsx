@@ -40,10 +40,7 @@ function ProductCard(props) {
 					size="small"
 					color="primary"
 					onClick={() => addToCart(product)}
-				>
-					{' '}
-					// Pass the product to the addToCart function Add to cart
-				</Button>
+				></Button>
 				<Button size="small" color="secondary">
 					Favorite
 				</Button>
