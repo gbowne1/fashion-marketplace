@@ -1,0 +1,21 @@
+.App {
+	text-align: center;
+	/* Ensures content doesn't get hidden under the fixed AppBar */
+	padding-top: 64px; /* Default height of MUI AppBar in desktop/tablet */
+	/* Ensures content doesn't get hidden over the fixed Footer */
+	padding-bottom: 300px; /* Adjust based on the actual height of your Footer component */
+}
+
+/* You might want a slightly smaller padding on mobile */
+@media (max-width: 600px) {
+	.App {
+		padding-top: 56px; /* Default height of MUI AppBar on mobile */
+	}
+}
+
+.App-main {
+	/* Standard container styling for the main content area */
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
